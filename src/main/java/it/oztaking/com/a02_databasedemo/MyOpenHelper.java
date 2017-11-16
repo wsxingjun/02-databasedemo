@@ -3,6 +3,7 @@ package it.oztaking.com.a02_databasedemo;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.database.sqlite.SQLiteDatabase.CursorFactory;
 
 /**
  * Created by Administrator on 2017-11-15.
@@ -18,8 +19,8 @@ public class MyOpenHelper extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
         db.execSQL("create table info(_id integer primary key autoincrement,name varchar(20),money varchar(20))");
-        db.execSQL("insert into info(name,money) values(?,?)",new String[]{"张三","5000"});
-        db.execSQL("insert into info(name,money) values(?,?)",new String[]{"李四","8000"});
+        db.execSQL("insert into info(name,money) values(?,?)",new String[]{"zhangsan","5000"});
+        db.execSQL("insert into info(name,money) values(?,?)",new String[]{"lisi","8000"});
     }
 
     @Override

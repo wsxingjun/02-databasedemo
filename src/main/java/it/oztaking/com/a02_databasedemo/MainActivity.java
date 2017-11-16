@@ -24,9 +24,12 @@ public class MainActivity extends AppCompatActivity {
                 String money = cursor.getString(2);
                 System.out.println("name:"+name+"-------"+money);
             }
+            cursor.close();
         }
 
-        cursor.close();
+
+
+
 
     }
 }
